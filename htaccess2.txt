@@ -1,18 +1,23 @@
 # public_html/.htaccess — BRIDGE ke telupress/public
 RewriteEngine On
 
-# 1) Force HTTPS (letakkan paling atas biar tidak double redirect)
+# 0) Lewatkan ACME untuk perpanjang SSL (Let's Encrypt dsb)
+RewriteRule ^\.well-known/ - [L]
+
+# 1) Force HTTPS
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-# 2) Matikan LSCache supaya tidak bentrok
+# 2) Matikan LSCache agar tidak bentrok
 <IfModule LiteSpeed>
 RewriteRule .* - [E=cache-control:no-cache]
 </IfModule>
 
-# 3) Lindungi direktori sensitif Laravel di bawah /telupress
+# 3) Lindungi direktori sensitif di bawah /telupress
 RewriteRule ^telupress/(vendor|storage|bootstrap|config|resources|routes)/ - [F,L]
 
-# 4) Arahkan SEMUA request ke /telupress/public
+# 4) Arahkan SEMUA request ke /telupress/public (kecuali file/dir nyata)
 RewriteCond %{REQUEST_URI} !^/telupress/public/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /telupress/public/$1 [L,QSA]
