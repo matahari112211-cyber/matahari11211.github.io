@@ -1,39 +1,1129 @@
-<?php
 
-use Illuminate\Contracts\Http\Kernel;
-use Illuminate\Http\Request;
+<!-- Modal -->
+<div class="modal fade" id="bookDetailModal" tabindex="-1" aria-labelledby="bookDetailModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bookDetailModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="bookDetailModalBody">
+        <!-- Book details will be loaded here -->
+      </div>
+    </div>
+  </div>
+</div>
 
-define('LARAVEL_START', microtime(true));
 
-/*
-|--------------------------------------------------------------------------
-| Check If The Application Is Under Maintenance
-|--------------------------------------------------------------------------
-*/
-if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
-    require $maintenance;
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="id" class="light-style layout-compact layout-navbar-fixed layout-menu-fixed   " dir="ltr" data-theme="theme-default" data-assets-path="https://telupress.telkomuniversity.ac.id/assets/" data-base-url="https://telupress.telkomuniversity.ac.id" data-framework="laravel" data-template="vertical-menu-theme-default-light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+  <title>Home |
+    Tel-U Press -
+    Telkom University
+  </title>
+  <meta name="description" content="Tel-U Press" />
+  <meta name="keywords" content="Tel-U Press">
+  <!-- laravel CRUD token -->
+  <meta name="csrf-token" content="wd6Jnn3KRM19d1gxhiKRzD6I0ptwkmMdbfnXSxBf">
+  <!-- Canonical SEO -->
+  <link rel="canonical" href="https://telupress.telkomuniversity.ac.id/">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://telupress.telkomuniversity.ac.id/assets/img/favicon/favicon.ico?telupress" />
+
+
+
+  <!-- Include Styles -->
+  <!-- $isFront is used to append the front layout styles only on the front layout otherwise the variable will be blank -->
+  <!-- BEGIN: Theme CSS-->
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<!--<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/fonts/fontawesome.css" />-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3.0/css/all.css" />
+
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/fonts/tabler-icons.css" />
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/fonts/flag-icons.css" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- Core CSS -->
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/css/rtl/core.css" />
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/css/rtl/theme-default.css" />
+
+
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/select2/select2.css" />
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/node-waves/node-waves.css" />
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/typeahead-js/typeahead.css" />
+
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css">
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css">
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css">
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.css">
+
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/toastr/toastr.css" />
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/bs-stepper/bs-stepper.css" />
+
+<!-- Vendor Styles -->
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/css/custom.css" />
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/apex-charts/apex-charts.css" />
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/swiper/swiper.css" />
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/swiper/swiper.css" />
+
+<!-- Page Styles -->
+<!-- Page -->
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/css/pages/cards-advance.css">
+<link rel="stylesheet" href="https://telupress.telkomuniversity.ac.id/assets/vendor/css/pages/ui-carousel.css" />
+
+  <!-- Include Scripts for customizer, helper, analytics, config -->
+  <!-- $isFront is used to append the front layout scriptsIncludes only on the front layout otherwise the variable will be blank -->
+  <!-- laravel style -->
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/js/helpers.js"></script>
+<!-- beautify ignore:start -->
+
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/js/template-customizer.js"></script>
+<!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+<script src="https://telupress.telkomuniversity.ac.id/assets/js/config.js"></script>
+
+<script>
+  window.templateCustomizer = new TemplateCustomizer({
+    cssPath: '',
+    themesPath: '',
+    defaultStyle: "",
+    defaultShowDropdownOnHover: "1", // true/false (for horizontal layout only)
+
+    lang: 'id',
+    pathResolver: function(path) {
+      var resolvedPaths = {
+        // Core stylesheets
+                  'core.css': 'https://telupress.telkomuniversity.ac.id/assets/vendor/css/rtl/core.css',
+          'core-dark.css': 'https://telupress.telkomuniversity.ac.id/assets/vendor/css/rtl/core-dark.css',
+        
+        // Themes
+                  'theme-default.css': 'https://telupress.telkomuniversity.ac.id/assets/vendor/css/rtl/theme-default.css',
+          'theme-default-dark.css':
+          'https://telupress.telkomuniversity.ac.id/assets/vendor/css/rtl/theme-default-dark.css',
+                  'theme-bordered.css': 'https://telupress.telkomuniversity.ac.id/assets/vendor/css/rtl/theme-bordered.css',
+          'theme-bordered-dark.css':
+          'https://telupress.telkomuniversity.ac.id/assets/vendor/css/rtl/theme-bordered-dark.css',
+                  'theme-semi-dark.css': 'https://telupress.telkomuniversity.ac.id/assets/vendor/css/rtl/theme-semi-dark.css',
+          'theme-semi-dark-dark.css':
+          'https://telupress.telkomuniversity.ac.id/assets/vendor/css/rtl/theme-semi-dark-dark.css',
+              }
+      return resolvedPaths[path] || path;
+    },
+    // 'controls': '',
+  });
+</script>
+</head>
+
+<body  class="openlibrary-red">
+    <div id="loading" class="loading" style="position: fixed;width: 100%;height: 100%; background: rgba(75, 70, 92, 0.4); z-index: 99999; display: none;">
+        <div class="loading-container">
+            <div class="loading-book">
+                <div class="inner">
+                    <div class="left"></div>
+                    <div class="middle"></div>
+                    <div class="right"></div>
+                </div>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="loading-text">Keep Reading, Even in Waiting...</div>
+        </div>
+    </div>
+
+
+  <!-- Layout Content -->
+  <div class="layout-wrapper layout-navbar-full layout-horizontal layout-without-menu">
+  <div class="layout-container">
+
+    <!-- BEGIN: Navbar-->
+        <!-- Navbar -->
+    <nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme" id="layout-navbar">
+    <div class="container-xxl">
+      
+      <!--  Brand demo (display only for navbar-full and hide on below xl) -->
+            <div class="navbar-brand app-brand demo d-none d-xl-flex py-0 me-4">
+        <a href="https://telupress.telkomuniversity.ac.id" class="app-brand-link gap-2">
+          <span class="app-brand-logo demo">
+            <!-- <svg width="32" height="20" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z" fill="#7367F0" />
+  <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd" d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z" fill="#161616" />
+  <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd" d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z" fill="#161616" />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z" fill="#7367F0" />
+</svg>
+ -->
+          </span>
+          <span class="app-brand-text demo menu-text fw-bold">
+            <!-- Tel-U Press -->
+
+          </span>
+        </a>
+        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-xl-none">
+          <i class="ti ti-x ti-sm align-middle"></i>
+        </a>
+      </div>
+      
+      <!-- ! Not required for layout-without-menu -->
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none  ">
+        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+          <i class="ti ti-menu-2 ti-sm"></i>
+        </a>
+      </div>
+      
+      <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+
+                <ul class="navbar-nav flex-row align-items-center ms-auto">
+          <!-- Language -->
+          <!-- <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
+            <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+              <i class='ti ti-language rounded-circle ti-md'></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item " href="https://telupress.telkomuniversity.ac.id/lang/en" data-language="en" data-text-direction="ltr">
+                  <span class="align-middle">English</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item " href="https://telupress.telkomuniversity.ac.id/lang/fr" data-language="fr" data-text-direction="ltr">
+                  <span class="align-middle">French</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item " href="https://telupress.telkomuniversity.ac.id/lang/ar" data-language="ar" data-text-direction="rtl">
+                  <span class="align-middle">Arabic</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item " href="https://telupress.telkomuniversity.ac.id/lang/de" data-language="de" data-text-direction="ltr">
+                  <span class="align-middle">German</span>
+                </a>
+              </li>
+            </ul>
+          </li> -->
+          <!-- Language -->
+          <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
+            <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+              <i class='fi fi-id fis rounded-circle me-1 fs-3'></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="https://telupress.telkomuniversity.ac.id/change-language/id" data-language="id">
+                  <i class="fi fi-id fis rounded-circle me-1 fs-3"></i>
+                  <span class="align-middle">Indonesia</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://telupress.telkomuniversity.ac.id/change-language/en" data-language="en">
+                  <i class="fi fi-us fis rounded-circle me-1 fs-3"></i>
+                  <span class="align-middle">English</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--/ Language -->
+
+
+          <!-- Style Switcher -->
+          <li class="nav-item dropdown-style-switcher dropdown me-2 me-xl-0">
+            <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+              <i class='ti ti-md'></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-styles">
+              <li>
+                <a class="dropdown-item" href="javascript:void(0);" data-theme="light">
+                  <span class="align-middle"><i class='ti ti-sun me-2'></i>Light</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="javascript:void(0);" data-theme="dark">
+                  <span class="align-middle"><i class="ti ti-moon me-2"></i>Dark</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="javascript:void(0);" data-theme="system">
+                  <span class="align-middle"><i class="ti ti-device-desktop me-2"></i>System</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--/ Style Switcher -->
+
+
+
+                    <!-- Search -->
+          <!-- <li class="nav-item navbar-search-wrapper me-2 me-xl-0">
+            <a class="nav-link search-toggler" href="javascript:void(0);">
+              <i class="ti ti-search ti-md"></i>
+            </a>
+          </li> -->
+          <!-- /Search -->
+          
+
+          <!--Shop -->
+
+          <!-- Notification -->
+          <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
+              <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" onclick="showcart()" aria-expanded="false">
+                <i class="ti ti-shopping-bag ti-md"></i>
+
+                <span class="badge bg-danger rounded-pill badge-notifications"></span>
+               <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sendInvoiceOffcanvas" style="display:none">
+              </a>
+          </li>
+          <!--/ Shop -->
+                    <!--User -->
+            <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
+              <a class="dropdown-item" href="https://telupress.telkomuniversity.ac.id/login">
+                  <i class='ti ti-login me-2'></i>
+                  <span class="align-middle">Login</span>
+                </a>
+            </li>
+          <!--/ User -->
+          <!--User -->
+            <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
+              <a class="dropdown-item" href="https://telupress.telkomuniversity.ac.id/register">
+                  <i class='menu-icon tf-icons ti ti-id-badge-2'></i>
+                  <span class="align-middle">Register</span>
+                </a>
+            </li>
+          <!--/ User -->
+                  </ul>
+      </div>
+
+      <!-- Search Small Screens -->
+      <div class="navbar-search-wrapper search-input-wrapper container-xxl d-none">
+        <input type="text" class="form-control search-input  border-0" placeholder="Search..." aria-label="Search...">
+        <i class="ti ti-x ti-sm search-toggler cursor-pointer"></i>
+      </div>
+          </div>
+      </nav>
+  <!-- / Navbar -->
+
+
+
+
+        <!-- END: Navbar-->
+
+
+    <!-- Layout page -->
+    <div class="layout-page">
+
+      
+      
+
+      <!-- Content wrapper -->
+      <div class="content-wrapper">
+
+                <!-- Horizontal Menu -->
+<aside id="layout-menu" class="layout-menu-horizontal menu-horizontal  menu bg-menu-theme flex-grow-0">
+  <div class="container-xxl d-flex h-100">
+    <ul class="menu-inner">
+      
+
+      
+      
+
+      
+      
+      <li class="menu-item ">
+        <a href="https://telupress.telkomuniversity.ac.id/service" class="menu-link" >
+                    <i class="menu-icon tf-icons ti ti-menu-2"></i>
+                    <div>
+                    Informasi Layanan</div>
+        </a>
+
+        
+              </li>
+            
+
+      
+      
+
+      
+      
+      <li class="menu-item ">
+        <a href="https://telupress.telkomuniversity.ac.id/publisher" class="menu-link" >
+                    <i class="menu-icon tf-icons ti ti-layout-distribute-vertical"></i>
+                    <div>
+                    Informasi Penerbit</div>
+        </a>
+
+        
+              </li>
+            
+
+      
+      
+
+      
+      
+      <li class="menu-item ">
+        <a href="https://telupress.telkomuniversity.ac.id/category" class="menu-link" >
+                    <i class="menu-icon tf-icons ti ti-category"></i>
+                    <div>
+                    Kategori</div>
+        </a>
+
+        
+              </li>
+            
+
+      
+      
+
+      
+      
+      <li class="menu-item ">
+        <a href="https://telupress.telkomuniversity.ac.id/about-us" class="menu-link" >
+                    <i class="menu-icon tf-icons ti ti-info-square-rounded"></i>
+                    <div>
+                    Tentang Kami</div>
+        </a>
+
+        
+              </li>
+            
+
+      
+      
+
+      
+      
+      <li class="menu-item ">
+        <a href="https://telupress.telkomuniversity.ac.id/contact-us" class="menu-link" >
+                    <i class="menu-icon tf-icons ti ti-address-book"></i>
+                    <div>
+                    Kontak Kami</div>
+        </a>
+
+        
+              </li>
+                </ul>
+  </div>
+</aside>
+<!--/ Horizontal Menu -->
+        
+        <!-- Content -->
+                  <div class="container-xxl flex-grow-1 container-p-y">
+                        <!-- content title -->
+            <div class="row mb-4">
+                <div class="col-sm-6 align-items-center">
+                                    </div>
+                <div class="col-sm-6 justify-content-end d-flex ytitle-left">
+                    <div class="d-flex align-items-center">
+                        <div class="badge bg-label-danger p-2 me-3 rounded"><i class="ti ti-calendar"></i></div>
+                        <div class="">
+                            <h6 class="mb-0" style="line-height: 1">18 September 2025</h6>
+                            <!-- <small class="text-muted">Tahun 2023 TW 1</small> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end content title -->
+            
+
+<div class="row">
+  <!-- Bootstrap carousel -->
+  <div class="col-lg-12 col-sm-6 mb-4">
+
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="https://telupress.telkomuniversity.ac.id/assets/img/elements/books1.jpg" alt="First slide" />
+          <div class="carousel-caption d-none d-md-block">
+            <h4></h4>
+            <p></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://telupress.telkomuniversity.ac.id/assets/img/elements/books2.jpg" alt="Second slide" />
+          <div class="carousel-caption d-none d-md-block">
+            <h4></h4>
+            <p></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://telupress.telkomuniversity.ac.id/assets/img/elements/books3.jpg" alt="Third slide" />
+          <div class="carousel-caption d-none d-md-block">
+            <h4></h4>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<div class="col-12 mb-12">
+  <div class="col-12 text-center">
+    <h1><div class="badge bg-label-danger">Buku Terbaru</div></h1>
+  </div>
+  <div class="swiper" id="swiper-3d-coverflow-effect">
+    <div class="swiper-wrapper">
+                  <div class="swiper-slide" style="background-image:url(https://telupress.telkomuniversity.ac.id/storage/cover/B250085_1757921961.png"></div>
+                  <div class="swiper-slide" style="background-image:url(https://telupress.telkomuniversity.ac.id/storage/cover/B250084_1756285654.png"></div>
+                  <div class="swiper-slide" style="background-image:url(https://telupress.telkomuniversity.ac.id/storage/cover/B250083_1755576315.png"></div>
+                  <div class="swiper-slide" style="background-image:url(https://telupress.telkomuniversity.ac.id/storage/cover/B250082_1753840101.png"></div>
+                  <div class="swiper-slide" style="background-image:url(https://telupress.telkomuniversity.ac.id/storage/cover/B250081_1753408959.png"></div>
+                  <div class="swiper-slide" style="background-image:url(https://telupress.telkomuniversity.ac.id/storage/cover/B250080_1749627354.png"></div>
+                  <div class="swiper-slide" style="background-image:url(https://telupress.telkomuniversity.ac.id/storage/cover/B250079_1750914680.png"></div>
+                  <div class="swiper-slide" style="background-image:url(https://telupress.telkomuniversity.ac.id/storage/cover/B250078_1748856935.png"></div>
+                  <div class="swiper-slide" style="background-image:url(https://telupress.telkomuniversity.ac.id/storage/cover/B250077_1747295519.png"></div>
+                  <div class="swiper-slide" style="background-image:url(https://telupress.telkomuniversity.ac.id/storage/cover/B250076_1747294665.png"></div>
+          </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<!-- Grid Card -->
+
+<div class="col-12 text-center">
+  <h1><div class="badge bg-label-danger">Buku Tercetak</div></h1>
+</div>
+<div class="row row-cols-1 row-cols-md-5 g-4 mb-5">
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250082_1753840101.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+          <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/metodologi-penelitian-komunikasi/139/386">Metodologi Penelitian Komunikasi </a><br><strong>Hardcopy</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Tercetak</span><br>
+          <span class="card-text badge bg-label-danger" >Sosial dan Humaniora</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=193&authorname=m.-fikri-akbar">M. Fikri Akbar</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=194&authorname=yulianti-keke">Yulianti Keke</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=195&authorname=freddy-yusanto">Freddy Yusanto</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=196&authorname=inri-inggrit-indrayani">Inri Inggrit Indrayani</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=197&authorname=sandy-allifiansyah">Sandy Allifiansyah</a>
+                                        </p>
+          <p class="card-text"><span class='card-text badge bg-label-success' ><strong style='font-size:16px'> Rp 90.000</strong></span><s>Rp 120.000</s></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250081_1753408959.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+          <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/maggotpreneur%3A-inovasi-sampah-untuk-ekonomi-hijau/138/383">Maggotpreneur: Inovasi Sampah untuk Ekonomi Hijau </a><br><strong>Hardcopy</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Tercetak</span><br>
+          <span class="card-text badge bg-label-danger" >Sosial dan Humaniora</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=190&authorname=miftahol-arifin">Miftahol Arifin</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=191&authorname=famila-dwi-winati">Famila Dwi Winati</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=192&authorname=faizah">Faizah</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 85.000</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250080_1749627354.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+          <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/enam-jalan-pulang-yang-tak-sama/137/382">Enam Jalan Pulang yang Tak Sama </a><br><strong>Hardcopy</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Tercetak</span><br>
+          <span class="card-text badge bg-label-danger" >Umum</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=187&authorname=dudi-darmawan">Dudi Darmawan</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 60.000</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250079_1750914680.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+          <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/dinamika-adopsi-dan-keusangan-teknologi%3A-analisis-berdasarkan-teori-dan-studi-empiris/136/379">Dinamika Adopsi dan Keusangan Teknologi: Analisis Berdasarkan Teori dan Studi Empiris </a><br><strong>Hardcopy</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Tercetak</span><br>
+          <span class="card-text badge bg-label-danger" >Sosial dan Humaniora</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=19&authorname=indrawati">Indrawati</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=184&authorname=gadang-ramantoko">Gadang Ramantoko</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=185&authorname=tri-widarmanti">Tri Widarmanti</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=189&authorname=refi-rifaldi-windya-giri">Refi Rifaldi Windya Giri</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=64&authorname=indira-rachmawati">Indira Rachmawati</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 105.000</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250078_1748856935.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+          <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/sistem-komunikasi/135/378">Sistem Komunikasi </a><br><strong>Hardcopy</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Tercetak</span><br>
+          <span class="card-text badge bg-label-danger" >Sains Teknologi</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=180&authorname=linda-meylani">Linda Meylani</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=181&authorname=suhartono-tjondronegoro">Suhartono Tjondronegoro</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=182&authorname=achmad-ali-muayyadi">Achmad Ali Muayyadi</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=183&authorname=dharu-arseno">Dharu Arseno</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 93.000</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250075_1747989957.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+          <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/pengantar-teknik-industri%3A-fondasi%2C-konsep%2C-dan-aplikasi-menuju-solusi-inovatif/132/370">Pengantar Teknik Industri: Fondasi, Konsep, dan Aplikasi Menuju Solusi Inovatif </a><br><strong>Hardcopy</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Tercetak</span><br>
+          <span class="card-text badge bg-label-danger" >Sosial dan Humaniora</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=169&authorname=silvi-istiqomah">Silvi Istiqomah</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=170&authorname=perdana-suteja-putra">Perdana Suteja Putra</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=171&authorname=dominggo-bagus-baskara">Dominggo Bagus Baskara</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=172&authorname=huki-chandra">Huki Chandra</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=173&authorname=rizqa-amelia-zunaidi">Rizqa Amelia Zunaidi</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=174&authorname=ayu-endah-wahyuni">Ayu Endah Wahyuni</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=175&authorname=rahaditya-dimas-prihardianto">Rahaditya Dimas Prihardianto</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=176&authorname=wahyu-andy-prasetyabudi">Wahyu Andy Prasetyabudi</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=177&authorname=benazir-imam-arif-muttaqin">Benazir Imam Arif Muttaqin</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=178&authorname=paramaditya-arismawati">Paramaditya Arismawati</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=179&authorname=aufar-fikri-dimyati">Aufar Fikri Dimyati</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 94.000</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250074_1744167414.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+          <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/dasar-desain-menggunakan-adobe-photoshop/131/366">Dasar Desain Menggunakan Adobe Photoshop </a><br><strong>Hardcopy</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Tercetak</span><br>
+          <span class="card-text badge bg-label-danger" >Sains Teknologi</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=116&authorname=muharman-lubis">Muharman Lubis</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 72.000</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250073_1744167222.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+          <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/figma-unleashed%3A-unlocking-creativity-and-efficiency-for-professionals-and-beginners-in-design/130/365">Figma Unleashed: Unlocking Creativity and Efficiency for Professionals and Beginners in Design </a><br><strong>Hardcopy</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Tercetak</span><br>
+          <span class="card-text badge bg-label-danger" >Sains Teknologi</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=116&authorname=muharman-lubis">Muharman Lubis</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 58.000</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250072_1742184783.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+          <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/mastering-linux%3A-a-detailed-guide-for-beginners/129/355">Mastering Linux: A Detailed Guide for Beginners </a><br><strong>Hardcopy</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Tercetak</span><br>
+          <span class="card-text badge bg-label-danger" >Sains Teknologi</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=116&authorname=muharman-lubis">Muharman Lubis</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 59.000</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250070_1741665611.jpeg" alt="Card image cap" height="350" />
+        <div class="card-body">
+          <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/the-art-of-public-relation%3A-seni-memengaruhi-dan-membangun-reputasi/126/354">The Art of Public Relation: Seni Memengaruhi dan Membangun Reputasi </a><br><strong>Hardcopy</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Tercetak</span><br>
+          <span class="card-text badge bg-label-danger" >Sosial dan Humaniora</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=149&authorname=femi-oktaviani">Femi Oktaviani</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 100.000</strong></p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+<div class="col-12 text-center">
+  <h1><div class="badge bg-label-danger">Buku Digital</div></h1>
+</div>
+<div class="row row-cols-1 row-cols-md-5 g-4 mb-5">
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250082_1753840101.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+        <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/metodologi-penelitian-komunikasi/139/390">Metodologi Penelitian Komunikasi </a><br><strong>Ebook_Full</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Digital</span><br>
+          <span class="card-text badge bg-label-danger" >Sosial dan Humaniora</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=193&authorname=m.-fikri-akbar">M. Fikri Akbar</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=194&authorname=yulianti-keke">Yulianti Keke</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=195&authorname=freddy-yusanto">Freddy Yusanto</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=196&authorname=inri-inggrit-indrayani">Inri Inggrit Indrayani</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=197&authorname=sandy-allifiansyah">Sandy Allifiansyah</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 50.000</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250080_1749627354.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+        <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/enam-jalan-pulang-yang-tak-sama/137/387">Enam Jalan Pulang yang Tak Sama </a><br><strong>Ebook_Full</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Digital</span><br>
+          <span class="card-text badge bg-label-danger" >Umum</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=187&authorname=dudi-darmawan">Dudi Darmawan</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 0</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250079_1750914680.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+        <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/dinamika-adopsi-dan-keusangan-teknologi%3A-analisis-berdasarkan-teori-dan-studi-empiris/136/385">Dinamika Adopsi dan Keusangan Teknologi: Analisis Berdasarkan Teori dan Studi Empiris </a><br><strong>Ebook_Full</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Digital</span><br>
+          <span class="card-text badge bg-label-danger" >Sosial dan Humaniora</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=19&authorname=indrawati">Indrawati</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=184&authorname=gadang-ramantoko">Gadang Ramantoko</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=185&authorname=tri-widarmanti">Tri Widarmanti</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=189&authorname=refi-rifaldi-windya-giri">Refi Rifaldi Windya Giri</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=64&authorname=indira-rachmawati">Indira Rachmawati</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 50.000</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250078_1748856935.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+        <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/sistem-komunikasi/135/384">Sistem Komunikasi </a><br><strong>Ebook_Full</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Digital</span><br>
+          <span class="card-text badge bg-label-danger" >Sains Teknologi</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=180&authorname=linda-meylani">Linda Meylani</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=181&authorname=suhartono-tjondronegoro">Suhartono Tjondronegoro</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=182&authorname=achmad-ali-muayyadi">Achmad Ali Muayyadi</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=183&authorname=dharu-arseno">Dharu Arseno</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 50.000</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250076_1747294665.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+        <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/kota-jember-%3A-sejarah%2C-kenangan-dan-dinamika-kota-di-mata-blogger/133/381">Kota Jember : Sejarah, Kenangan dan Dinamika Kota di Mata Blogger </a><br><strong>Ebook_Full</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Digital</span><br>
+          <span class="card-text badge bg-label-danger" >Umum</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=77&authorname=achmad-rizal">Achmad Rizal</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 0</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250077_1747295519.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+        <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/menikmati-gedung-gedung-tua-di-bandung-wisata-alternatif-di-kota-bandung/134/380">Menikmati Gedung-Gedung Tua di Bandung Wisata Alternatif di Kota Bandung </a><br><strong>Ebook_Full</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Digital</span><br>
+          <span class="card-text badge bg-label-danger" >Umum</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=77&authorname=achmad-rizal">Achmad Rizal</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 0</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250066_1742960351.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+        <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/belajar-outsystems%3A-panduan-praktis-untuk-developer-dan-tester/122/372">Belajar OutSystems: Panduan Praktis untuk Developer dan Tester </a><br><strong>Ebook_Full</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Digital</span><br>
+          <span class="card-text badge bg-label-danger" >Sains Teknologi</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=162&authorname=dana-sulistiyo-kusumo">Dana Sulistiyo Kusumo</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=163&authorname=rosa-reska-riskiana">Rosa Reska Riskiana</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=168&authorname=gagah-aji-gunadi">Gagah Aji Gunadi</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=165&authorname=i-dewa-ayu-indira-wulandari-chrisna">I Dewa Ayu Indira Wulandari Chrisna</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=166&authorname=aqila-fitri-alitu">Aqila Fitri Alitu</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 50.000</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250075_1747989957.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+        <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/pengantar-teknik-industri%3A-fondasi%2C-konsep%2C-dan-aplikasi-menuju-solusi-inovatif/132/371">Pengantar Teknik Industri: Fondasi, Konsep, dan Aplikasi Menuju Solusi Inovatif </a><br><strong>Ebook_Full</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Digital</span><br>
+          <span class="card-text badge bg-label-danger" >Sosial dan Humaniora</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=169&authorname=silvi-istiqomah">Silvi Istiqomah</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=170&authorname=perdana-suteja-putra">Perdana Suteja Putra</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=171&authorname=dominggo-bagus-baskara">Dominggo Bagus Baskara</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=172&authorname=huki-chandra">Huki Chandra</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=173&authorname=rizqa-amelia-zunaidi">Rizqa Amelia Zunaidi</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=174&authorname=ayu-endah-wahyuni">Ayu Endah Wahyuni</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=175&authorname=rahaditya-dimas-prihardianto">Rahaditya Dimas Prihardianto</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=176&authorname=wahyu-andy-prasetyabudi">Wahyu Andy Prasetyabudi</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=177&authorname=benazir-imam-arif-muttaqin">Benazir Imam Arif Muttaqin</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=178&authorname=paramaditya-arismawati">Paramaditya Arismawati</a>,
+                                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=179&authorname=aufar-fikri-dimyati">Aufar Fikri Dimyati</a>
+                                        </p>
+          <p class="card-text"><span class='card-text badge bg-label-success' ><strong style='font-size:16px'> Rp 50.000</strong></span><s>Rp 50.000</s></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250067_1742262355.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+        <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/tinjauan-kriya-tekstil%3A-introduksi-pengetahuan-dan-wawasan-kriya-tekstil/123/369">Tinjauan Kriya Tekstil: Introduksi Pengetahuan dan Wawasan Kriya Tekstil </a><br><strong>Ebook_Full</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Digital</span><br>
+          <span class="card-text badge bg-label-danger" >Umum</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=66&authorname=fajar-ciptandi">Fajar Ciptandi</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 50.000</strong></p>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" src="https://telupress.telkomuniversity.ac.id/storage/cover/B250072_1742184783.png" alt="Card image cap" height="350" />
+        <div class="card-body">
+        <h6 class="card-title">  <a href="https://telupress.telkomuniversity.ac.id/product/mastering-linux%3A-a-detailed-guide-for-beginners/129/368">Mastering Linux: A Detailed Guide for Beginners </a><br><strong>Ebook_Full</strong></h6>
+          <span class="card-text badge bg-label-primary" >Buku Digital</span><br>
+          <span class="card-text badge bg-label-danger" >Sains Teknologi</span><br><br>
+                      <p>
+                                                <a href="https://telupress.telkomuniversity.ac.id/category?author=116&authorname=muharman-lubis">Muharman Lubis</a>
+                                        </p>
+          <p class="card-text"><strong style='font-size:16px'>Rp 50.000</strong></p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+          </div>
+          <!-- / Content -->
+
+          <!-- Footer -->
+                    <!-- Footer-->
+<!-- <footer class="content-footer footer bg-footer-theme">
+  <div class="container-xxl">
+    <div class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
+      <div>
+        © <script>
+          document.write(new Date().getFullYear())
+
+      </script>
+      , made with ❤️ by <a href="https://openlibrary.telkomuniversity.ac.id" target="_blank" class="fw-medium">Open Library Telkom U</a>
+      </div>
+      <div class="d-none d-lg-inline-block">
+        <a href="https://themeforest.net/licenses/standard" class="footer-link me-4" target="_blank">License</a>
+        <a href="https://1.envato.market/pixinvent_portfolio" target="_blank" class="footer-link me-4">More Themes</a>
+        <a href="https://demos.pixinvent.com/vuexy-html-admin-template/documentation/laravel-introduction.html" target="_blank" class="footer-link me-4">Documentation</a>
+        <a href="https://pixinvent.ticksy.com/" target="_blank" class="footer-link d-none d-sm-inline-block">Support</a>
+      </div>
+    </div>
+  </div>
+</footer> -->
+<!--/ Footer-->
+
+<section id="adv-footer">
+
+  <footer class="footer bg-light">
+    <div class="container-fluid container-p-x pt-5 pb-4">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 mb-4 mb-sm-0">
+
+
+          <!-- <h4 class="fw-medium mb-3"><a href="https://demos.pixinvent.com/vuexy-html-admin-template/landing/" target="_blank" class="footer-text"></a></h4> -->
+
+
+          <img class="d-block" width="40%" src="https://telupress.telkomuniversity.ac.id/assets/img/openlibrary/logo_telu_press.png" alt="Logo Tel-U Press" />
+          <h5>Media penerbitan Universitas Telkom</h5>
+          <p class="pt-4">
+            <script>
+              document.write(new Date().getFullYear())
+            </script> © Tel-U Press
+          </p>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
+          <h5>Quick Link</h5>
+          <ul class="list-unstyled">
+            <li><a href="service" class="footer-link d-block pb-2"><i class="ti ti-menu-2 ti-sm"></i> Informasi Layanan</a></li>
+            <li><a href="publisher" class="footer-link d-block pb-2"><i class="ti ti-layout-distribute-vertical ti-sm"></i> Informasi Penerbit</a></li>
+            <li><a href="shop" class="footer-link d-block pb-2"><i class="ti ti-shopping-bag ti-sm"></i> Toko</a></li>
+            <li><a href="category" class="footer-link d-block pb-2"><i class="ti ti-category ti-sm"></i> Kategori</a></li>
+            <li><a href="about-us" class="footer-link d-block pb-2"><i class="ti ti-info-square-rounded ti-sm"></i> Tentang Kami</a></li>
+            <li><a href="contact-us" class="footer-link d-block pb-2"><i class="ti ti-address-book ti-sm"></i> Kontak Kami</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <h5>Kontak Kami</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://maps.app.goo.gl/s8Gg2CBezBTv26bLA" target="_blank" class="footer-link d-block pb-2"><i class="ti ti-map-2 ti-sm"></i> Gd. Manterawu lt.5 Bandung Technoplex, Jl. Telekomunikasi 1 Ters. Buah Batu Bandung</a></li>
+            <li>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2"><i class="ti ti-address-book ti-sm"></i> 0812-80000-437</a>
+            </li>
+            <li><a href="javascript:void(0)" class="footer-link d-block pb-2"><i class="ti ti-mail ti-sm"></i> telupress@telkomuniversity.ac.id</a></li>
+            <li><a href="https://instagram.com/tel_upress" target="_blank" class="footer-link d-block pb-2"><i class="ti ti-brand-instagram ti-sm"></i> @tel_upress</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+<!--/ Advanced footer -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZWKN28LEJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZWKN28LEJ');
+</script>
+                    <!-- / Footer -->
+          <div class="content-backdrop fade"></div>
+        </div>
+        <!--/ Content wrapper -->
+      </div>
+      <!-- / Layout page -->
+    </div>
+    <!-- / Layout Container -->
+
+        <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+        <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+    <div class="drag-target"></div>
+  </div>
+  <!-- / Layout wrapper -->
+    <!--/ Layout Content -->
+
+
+
+  <!-- Include Scripts -->
+  <!-- $isFront is used to append the front layout scripts only on the front layout otherwise the variable will be blank -->
+  <!-- BEGIN: Vendor JS-->
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/jquery/jquery.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/popper/popper.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/js/bootstrap.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/node-waves/node-waves.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/hammer/hammer.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/i18n/i18n.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/typeahead-js/typeahead.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/js/menu.js"></script>
+
+<script type="text/javascript" src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/validation/additional-methods.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/select2/select2.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/toastr/toastr.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+<!-- Flat Picker -->
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/moment/moment.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/flatpickr/flatpickr.js"></script>
+
+<script language="JavaScript">
+const urlassets = 'https://telupress.telkomuniversity.ac.id/';
+</script>
+
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/swiper/swiper.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/vendor/libs/swiper/swiper.js"></script>
+<!-- END: Page Vendor JS-->
+<!-- BEGIN: Theme JS-->
+<!-- END: Theme JS-->
+<script src="https://telupress.telkomuniversity.ac.id/assets/js/main.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/js/setting.js"></script>
+
+<!-- BEGIN: Page JS-->
+<script src="https://telupress.telkomuniversity.ac.id/assets/js/dashboards-analytics.js"></script>
+<script src="https://telupress.telkomuniversity.ac.id/assets/js/ui-carousel.js"></script>
+<!-- END: Page JS-->
+
+<!-- Send Invoice Sidebar -->
+<div class="offcanvas offcanvas-end" id="sendInvoiceOffcanvas" aria-hidden="true">
+  <div class="offcanvas-header my-1">
+    <h5 class="offcanvas-title">Keranjang Belanja</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body ">
+        <div id="show_cart">
+        </div>
+  </div>
+  <div class="offcanvas-header my-1" style="display:block !important">
+    <div class="form-group row">
+          <label class="col-md-4 col-form-label"> <h5>Total </h5></label>
+          <label class="col-md-8 col-form-label text-end"> <h5 id="total_cart"></h5></label>
+          </label>
+    </div>
+    <div class="form-group row">
+          <label class="col-md-12 col-form-label">
+            <a class="btn btn-primary d-grid w-100" type="button" href="https://telupress.telkomuniversity.ac.id/checkout/cart">
+              <span class="d-flex align-items-center justify-content-center text-nowrap"><i class="ti ti-coin ti-xs me-2"></i>Selesai belanja</span>
+            </a>
+          </label>
+    </div>
+  </div>
+</div>
+<!-- /Send Invoice Sidebar -->
+</body>
+<script>
+
+let url_common = 'https://telupress.telkomuniversity.ac.id/cart';
+
+$.ajax({
+  url: url_common+'/countcart',
+  type: 'post',
+  beforeSend: function() {
+      // Do nothing here
+  },
+  complete: function() {
+      // Do nothing here
+  },
+  success: function(data) {
+        if(data.status == 'success'){
+        $('.badge-notifications').html(data.count);
+        }
+  }
+});
+
+setInterval(function() {
+  $.ajax({
+    url: url_common+'/countcart',
+    type: 'post',
+    beforeSend: function() {
+        // Do nothing here
+    },
+    complete: function() {
+        // Do nothing here
+    },
+    success: function(data) {
+          if(data.status == 'success'){
+          $('.badge-notifications').html(data.count);
+          }
+    }
+  });
+}, 10000); // 5000 milliseconds = 5 seconds
+
+function showcart()
+{
+  $.ajax({
+      url: url_common+'/showcart',
+      type: 'post',
+      success: function(data) {
+           if(data.status == 'success'){
+            $('#show_cart').html(data.data);
+            $('#total_cart').html(data.total);
+            $('.badge-notifications').html(data.count);
+            $('[data-bs-toggle="offcanvas"][data-bs-target="#sendInvoiceOffcanvas"]').click();
+           }
+      }
+  });
 }
 
-/*
-|--------------------------------------------------------------------------
-| Register The Auto Loader
-|--------------------------------------------------------------------------
-*/
-require __DIR__.'/../vendor/autoload.php';
+function deletecart(id)
+{
+  checked = $("input[type=checkbox]:checked").length;
 
-/*
-|--------------------------------------------------------------------------
-| Run The Application
-|--------------------------------------------------------------------------
-*/
-$app = require_once __DIR__.'/../bootstrap/app.php';
+  $.ajax({
+      url: url_common+'/deletecart',
+      type: 'post',
+      data: {
+        id : id
+      },
+      success: function(data) {
+           if(data.status == 'success'){
+            $('#show_cart').html(data.data);
+            $('#total_cart').html(data.total);
+            $('.badge-notifications').html(data.count);
+            // $('[data-bs-toggle="offcanvas"][data-bs-target="#sendInvoiceOffcanvas"]').click();
 
-$kernel = $app->make(Kernel::class);
+             // Update stock in quantity inputs
+            if (data.stock) {
+              Object.keys(data.stock).forEach(function(key) {
+                  let stockData = data.stock[key];
+                  $('#quantity' + key).val(1);
+                  $('#quantity' + key).attr('max', stockData.stock);
+                  $('#quantity_desc' + key).html("Stok: <b>"+stockData.stock+"</b>");
+              });
+            }
+           }
+      }
+  });
+}
 
-$response = $kernel->handle(
-    $request = Request::capture()
-);
-
-$response->send();
-
-$kernel->terminate($request, $response);
+</script>
+</html>
