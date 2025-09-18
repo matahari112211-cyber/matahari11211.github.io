@@ -36,7 +36,7 @@ var codeVersion="f7d8b3d494288b34cb00105ee5d230d68b0ccca7"</script>
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "PGSoft Update Oktober 2025 Mahjong Ways: 3 Fitur yang Wajib Dicoba Pengguna Senior",
-  "image": "https://imagizer.imageshack.com/img923/8788/RFwWyz.jpg",
+  "image": "https://imagizer.imageshack.com/img924/3848/8XKIu3.jpg",
   "description": "Jelajahi 3 fitur terbaru PGSoft update Oktober 2025 untuk Mahjong Ways yang dirancang khusus untuk pengguna senior. Advanced analytics, smart session controller, dan enhanced customization untuk pengalaman bermain optimal.",
   "brand": {
     "@type": "Brand",
@@ -179,7 +179,7 @@ window.dataLayer=window.dataLayer||[];
     <!-- Open Graph -->
     <meta property="og:title" content="PGSoft Update Oktober 2025 Mahjong Ways: 3 Fitur yang Wajib Dicoba Pengguna Senior">
     <meta property="og:description" content="Jelajahi 3 fitur terbaru PGSoft update Oktober 2025 untuk Mahjong Ways yang dirancang khusus untuk pengguna senior. Advanced analytics, smart session controller, dan enhanced customization untuk pengalaman bermain optimal.">
-    <meta property="og:image" content="https://imagizer.imageshack.com/img923/8788/RFwWyz.jpg">
+    <meta property="og:image" content="https://imagizer.imageshack.com/img924/3848/8XKIu3.jpg">
     <meta property="og:url" content="https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/20/">
     <meta property="og:type" content="website">
 
@@ -187,7 +187,7 @@ window.dataLayer=window.dataLayer||[];
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="PGSoft Update Oktober 2025 Mahjong Ways: 3 Fitur yang Wajib Dicoba Pengguna Senior">
     <meta name="twitter:description" content="Jelajahi 3 fitur terbaru PGSoft update Oktober 2025 untuk Mahjong Ways yang dirancang khusus untuk pengguna senior. Advanced analytics, smart session controller, dan enhanced customization untuk pengalaman bermain optimal.">
-    <meta name="twitter:image" content="https://imagizer.imageshack.com/img923/8788/RFwWyz.jpg">
+    <meta name="twitter:image" content="https://imagizer.imageshack.com/img924/3848/8XKIu3.jpg">
     <meta property="og:title" content="PGSoft Update Oktober 2025 Mahjong Ways: 3 Fitur yang Wajib Dicoba Pengguna Senior">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/20/">
@@ -1042,7 +1042,7 @@ window.GtmMeasurements.sendAnalyticsEvent({"eventName":"view_item","eventType":"
 
 
                             <div bis_skin_checked="1">
-                                <link href="https://imagizer.imageshack.com/img923/8788/RFwWyz.jpg">
+                                <link href="https://imagizer.imageshack.com/img924/3848/8XKIu3.jpg">
 
                                 <div class="content-s " bis_skin_checked="1">
                                     <div class="item-bookmarking__left-icons__wrapper" bis_skin_checked="1">
@@ -1059,7 +1059,7 @@ window.GtmMeasurements.sendAnalyticsEvent({"eventName":"view_item","eventType":"
 
 
 
-                                            <a target="_blank" href="https://ransplay-io.com/dewa"><img alt="PGSoft Update Oktober 2025 Mahjong Ways: 3 Fitur yang Wajib Dicoba Pengguna Senior" width="1280" height="720" srcset="https://imagizer.imageshack.com/img923/8788/RFwWyz.jpg" sizes="(min-width: 1280px) 590px, (min-width: 1px) 100vw, 600px" src="https://imagizer.imageshack.com/img923/8788/RFwWyz.jpg"></a>
+                                            <a target="_blank" href="https://ransplay-io.com/dewa"><img alt="PGSoft Update Oktober 2025 Mahjong Ways: 3 Fitur yang Wajib Dicoba Pengguna Senior" width="1280" height="720" srcset="https://imagizer.imageshack.com/img924/3848/8XKIu3.jpg" sizes="(min-width: 1280px) 590px, (min-width: 1px) 100vw, 600px" src="https://imagizer.imageshack.com/img924/3848/8XKIu3.jpg"></a>
                                             <div class="js- item-preview-image__gallery" data-title="PGSoft Update Oktober 2025 Mahjong Ways: 3 Fitur yang Wajib Dicoba Pengguna Senior" data-url="marketica-marketplace-wordpress-theme/screenshots/modal/8988002" bis_skin_checked="1">
                                                 <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/00-marketica-preview-sale37.jpg">MARKETICA_PREVIEW/00-marketica-preview-sale37.jpg</a>
                                                 <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/01_marketica2_homepage.png">MARKETICA_PREVIEW/01_marketica2_homepage.png</a>
