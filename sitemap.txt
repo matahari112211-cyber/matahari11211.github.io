@@ -86,4 +86,5 @@
     <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/15/</loc>
     <lastmod>2025-09-18T07:44:29+00:00</lastmod>
     <priority>0.80</priority>
+  </url>
 </urlset>
