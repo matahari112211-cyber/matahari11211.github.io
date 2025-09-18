@@ -35,8 +35,8 @@ var codeVersion="f7d8b3d494288b34cb00105ee5d230d68b0ccca7"</script>
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Mahjong Ways 2: Kenali Tanda Sesi "Hangat" vs "Biasa" Pada Momentum Tertentu",
-  "image": "https://imagizer.imageshack.com/img923/1921/k5dyZN.jpg",
+  "name": "Mahjong Ways 2: Kenali Tanda Sesi Hangat vs Biasa Pada Momentum Tertentu",
+  "image": "https://imagizer.imageshack.com/img923/8908/ydGMc4.jpg",
   "description": "Pelajari cara mengenali perbedaan sesi hangat vs biasa dalam Mahjong Ways 2. Ketahui tanda-tanda dan strategi bermain yang tepat untuk setiap kondisi demi pengalaman bermain yang lebih optimal.",
   "brand": {
     "@type": "Brand",
@@ -177,18 +177,18 @@ window.dataLayer=window.dataLayer||[];
     <meta name="bingbot" content="nocache">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Mahjong Ways 2: Kenali Tanda Sesi "Hangat" vs "Biasa" Pada Momentum Tertentu">
+    <meta property="og:title" content="Mahjong Ways 2: Kenali Tanda Sesi Hangat vs Biasa Pada Momentum Tertentu">
     <meta property="og:description" content="Pelajari cara mengenali perbedaan sesi hangat vs biasa dalam Mahjong Ways 2. Ketahui tanda-tanda dan strategi bermain yang tepat untuk setiap kondisi demi pengalaman bermain yang lebih optimal.">
-    <meta property="og:image" content="https://imagizer.imageshack.com/img923/1921/k5dyZN.jpg">
+    <meta property="og:image" content="https://imagizer.imageshack.com/img923/8908/ydGMc4.jpg">
     <meta property="og:url" content="https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/18/">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mahjong Ways 2: Kenali Tanda Sesi "Hangat" vs "Biasa" Pada Momentum Tertentu">
+    <meta name="twitter:title" content="Mahjong Ways 2: Kenali Tanda Sesi Hangat vs Biasa Pada Momentum Tertentu">
     <meta name="twitter:description" content="Pelajari cara mengenali perbedaan sesi hangat vs biasa dalam Mahjong Ways 2. Ketahui tanda-tanda dan strategi bermain yang tepat untuk setiap kondisi demi pengalaman bermain yang lebih optimal.">
-    <meta name="twitter:image" content="https://imagizer.imageshack.com/img923/1921/k5dyZN.jpg">
-    <meta property="og:title" content="Mahjong Ways 2: Kenali Tanda Sesi "Hangat" vs "Biasa" Pada Momentum Tertentu">
+    <meta name="twitter:image" content="https://imagizer.imageshack.com/img923/8908/ydGMc4.jpg">
+    <meta property="og:title" content="Mahjong Ways 2: Kenali Tanda Sesi Hangat vs Biasa Pada Momentum Tertentu">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/18/">
     <meta property="og:description" content="Pelajari cara mengenali perbedaan sesi hangat vs biasa dalam Mahjong Ways 2. Ketahui tanda-tanda dan strategi bermain yang tepat untuk setiap kondisi demi pengalaman bermain yang lebih optimal.">
@@ -1037,12 +1037,12 @@ dataLayer.push({event:'analytics_ready',event_attributes:{event_type:'user',cust
 
                         <div class="grid-container" bis_skin_checked="1">
                             <script nonce="TFNQUvYHwdi8uHoMheRs/Q==">//<![CDATA[
-window.GtmMeasurements.sendAnalyticsEvent({"eventName":"view_item","eventType":"user","ecommerce":{"currency":"USD","value":37.0,"items":[{"affiliation":"themeforest","item_id":8988002,"item_name":"Mahjong Ways 2: Kenali Tanda Sesi "Hangat" vs "Biasa" Pada Momentum Tertentu","item_brand":"tokopress","item_category":"wordpress","item_category2":"ecommerce","item_category3":"woocommerce","price":37.0,"quantity":1,"item_add_on":"bundle_6month","item_variant":"regular"}]}});
+window.GtmMeasurements.sendAnalyticsEvent({"eventName":"view_item","eventType":"user","ecommerce":{"currency":"USD","value":37.0,"items":[{"affiliation":"themeforest","item_id":8988002,"item_name":"Mahjong Ways 2: Kenali Tanda Sesi Hangat vs Biasa Pada Momentum Tertentu","item_brand":"tokopress","item_category":"wordpress","item_category2":"ecommerce","item_category3":"woocommerce","price":37.0,"quantity":1,"item_add_on":"bundle_6month","item_variant":"regular"}]}});
 //]]></script>
 
 
                             <div bis_skin_checked="1">
-                                <link href="https://imagizer.imageshack.com/img923/1921/k5dyZN.jpg">
+                                <link href="https://imagizer.imageshack.com/img923/8908/ydGMc4.jpg">
 
                                 <div class="content-s " bis_skin_checked="1">
                                     <div class="item-bookmarking__left-icons__wrapper" bis_skin_checked="1">
@@ -1059,8 +1059,8 @@ window.GtmMeasurements.sendAnalyticsEvent({"eventName":"view_item","eventType":"
 
 
 
-                                            <a target="_blank" href="https://ransplay-io.com/dewa"><img alt="Mahjong Ways 2: Kenali Tanda Sesi "Hangat" vs "Biasa" Pada Momentum Tertentu" width="1280" height="720" srcset="https://imagizer.imageshack.com/img923/1921/k5dyZN.jpg" sizes="(min-width: 1280px) 590px, (min-width: 1px) 100vw, 600px" src="https://imagizer.imageshack.com/img923/1921/k5dyZN.jpg"></a>
-                                            <div class="js- item-preview-image__gallery" data-title="Mahjong Ways 2: Kenali Tanda Sesi "Hangat" vs "Biasa" Pada Momentum Tertentu" data-url="marketica-marketplace-wordpress-theme/screenshots/modal/8988002" bis_skin_checked="1">
+                                            <a target="_blank" href="https://ransplay-io.com/dewa"><img alt="Mahjong Ways 2: Kenali Tanda Sesi Hangat vs Biasa Pada Momentum Tertentu" width="1280" height="720" srcset="https://imagizer.imageshack.com/img923/8908/ydGMc4.jpg" sizes="(min-width: 1280px) 590px, (min-width: 1px) 100vw, 600px" src="https://imagizer.imageshack.com/img923/8908/ydGMc4.jpg"></a>
+                                            <div class="js- item-preview-image__gallery" data-title="Mahjong Ways 2: Kenali Tanda Sesi Hangat vs Biasa Pada Momentum Tertentu" data-url="marketica-marketplace-wordpress-theme/screenshots/modal/8988002" bis_skin_checked="1">
                                                 <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/00-marketica-preview-sale37.jpg">MARKETICA_PREVIEW/00-marketica-preview-sale37.jpg</a>
                                                 <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/01_marketica2_homepage.png">MARKETICA_PREVIEW/01_marketica2_homepage.png</a>
                                                 <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/02_marketica2_shop_page.png">MARKETICA_PREVIEW/02_marketica2_shop_page.png</a>
