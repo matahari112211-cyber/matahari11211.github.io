@@ -9,33 +9,81 @@
 
   <url>
     <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/</loc>
-    <lastmod>2025-09-17T07:44:29+00:00</lastmod>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/01/</loc>
-    <lastmod>2025-09-17T07:44:29+00:00</lastmod>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/02/</loc>
-    <lastmod>2025-09-17T07:44:29+00:00</lastmod>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/03/</loc>
-    <lastmod>2025-09-17T07:44:29+00:00</lastmod>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/04/</loc>
-    <lastmod>2025-09-17T07:44:29+00:00</lastmod>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/05/</loc>
-    <lastmod>2025-09-17T07:44:29+00:00</lastmod>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
     <priority>0.80</priority>
   </url>
-
+  <url>
+    <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/06/</loc>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/07/</loc>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/08/</loc>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/09/</loc>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/10/</loc>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/11/</loc>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/12/</loc>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/13/</loc>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/14/</loc>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/15/</loc>
+    <lastmod>2025-09-18T07:44:29+00:00</lastmod>
+    <priority>0.80</priority>
 </urlset>
