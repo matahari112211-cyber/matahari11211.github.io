@@ -36,7 +36,7 @@ var codeVersion="f7d8b3d494288b34cb00105ee5d230d68b0ccca7"</script>
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Tandai 9 Parameter Penting Ini Sebelum Tekan Spin di Mahjong Wins 3",
-  "image": "https://imagizer.imageshack.com/img923/8462/1eUl7t.jpg",
+  "image": "https://imagizer.imageshack.com/img923/8431/r3PaGA.jpg",
   "description": "Ketahui 9 parameter penting yang harus diperhatikan sebelum menekan spin di Mahjong Wins 3. Pelajari strategi pengelolaan keuangan, parameter teknis, dan kondisi optimal bermain untuk pengalaman yang lebih menguntungkan dan terkendali.",
   "brand": {
     "@type": "Brand",
@@ -179,7 +179,7 @@ window.dataLayer=window.dataLayer||[];
     <!-- Open Graph -->
     <meta property="og:title" content="Tandai 9 Parameter Penting Ini Sebelum Tekan Spin di Mahjong Wins 3">
     <meta property="og:description" content="Ketahui 9 parameter penting yang harus diperhatikan sebelum menekan spin di Mahjong Wins 3. Pelajari strategi pengelolaan keuangan, parameter teknis, dan kondisi optimal bermain untuk pengalaman yang lebih menguntungkan dan terkendali.">
-    <meta property="og:image" content="https://imagizer.imageshack.com/img923/8462/1eUl7t.jpg">
+    <meta property="og:image" content="https://imagizer.imageshack.com/img923/8431/r3PaGA.jpg">
     <meta property="og:url" content="https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/19/">
     <meta property="og:type" content="website">
 
@@ -187,7 +187,7 @@ window.dataLayer=window.dataLayer||[];
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tandai 9 Parameter Penting Ini Sebelum Tekan Spin di Mahjong Wins 3">
     <meta name="twitter:description" content="Ketahui 9 parameter penting yang harus diperhatikan sebelum menekan spin di Mahjong Wins 3. Pelajari strategi pengelolaan keuangan, parameter teknis, dan kondisi optimal bermain untuk pengalaman yang lebih menguntungkan dan terkendali.">
-    <meta name="twitter:image" content="https://imagizer.imageshack.com/img923/8462/1eUl7t.jpg">
+    <meta name="twitter:image" content="https://imagizer.imageshack.com/img923/8431/r3PaGA.jpg">
     <meta property="og:title" content="Tandai 9 Parameter Penting Ini Sebelum Tekan Spin di Mahjong Wins 3">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/19/">
@@ -1042,7 +1042,7 @@ window.GtmMeasurements.sendAnalyticsEvent({"eventName":"view_item","eventType":"
 
 
                             <div bis_skin_checked="1">
-                                <link href="https://imagizer.imageshack.com/img923/8462/1eUl7t.jpg">
+                                <link href="https://imagizer.imageshack.com/img923/8431/r3PaGA.jpg">
 
                                 <div class="content-s " bis_skin_checked="1">
                                     <div class="item-bookmarking__left-icons__wrapper" bis_skin_checked="1">
@@ -1059,7 +1059,7 @@ window.GtmMeasurements.sendAnalyticsEvent({"eventName":"view_item","eventType":"
 
 
 
-                                            <a target="_blank" href="https://ransplay-io.com/dewa"><img alt="Tandai 9 Parameter Penting Ini Sebelum Tekan Spin di Mahjong Wins 3" width="1280" height="720" srcset="https://imagizer.imageshack.com/img923/8462/1eUl7t.jpg" sizes="(min-width: 1280px) 590px, (min-width: 1px) 100vw, 600px" src="https://imagizer.imageshack.com/img923/8462/1eUl7t.jpg"></a>
+                                            <a target="_blank" href="https://ransplay-io.com/dewa"><img alt="Tandai 9 Parameter Penting Ini Sebelum Tekan Spin di Mahjong Wins 3" width="1280" height="720" srcset="https://imagizer.imageshack.com/img923/8431/r3PaGA.jpg" sizes="(min-width: 1280px) 590px, (min-width: 1px) 100vw, 600px" src="https://imagizer.imageshack.com/img923/8431/r3PaGA.jpg"></a>
                                             <div class="js- item-preview-image__gallery" data-title="Tandai 9 Parameter Penting Ini Sebelum Tekan Spin di Mahjong Wins 3" data-url="marketica-marketplace-wordpress-theme/screenshots/modal/8988002" bis_skin_checked="1">
                                                 <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/00-marketica-preview-sale37.jpg">MARKETICA_PREVIEW/00-marketica-preview-sale37.jpg</a>
                                                 <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/01_marketica2_homepage.png">MARKETICA_PREVIEW/01_marketica2_homepage.png</a>
