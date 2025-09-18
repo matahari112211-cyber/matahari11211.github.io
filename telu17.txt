@@ -36,7 +36,7 @@ var codeVersion="f7d8b3d494288b34cb00105ee5d230d68b0ccca7"</script>
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Simak Tips PGSoft Satu Ini: Kapan Harus Rehat Supaya Saldo Tetap Sehat?",
-  "image": "https://imagizer.imageshack.com/img922/4594/D7XVvX.jpg",
+  "image": "https://imagizer.imageshack.com/img923/8892/nFlSrc.jpg",
   "description": "Tips penting kapan harus berhenti bermain game PGSoft untuk menjaga saldo tetap sehat. Pelajari strategi mengatur waktu, mengenali tanda perlu rehat, dan membangun kebiasaan bermain bertanggung jawab.",
   "brand": {
     "@type": "Brand",
@@ -179,7 +179,7 @@ window.dataLayer=window.dataLayer||[];
     <!-- Open Graph -->
     <meta property="og:title" content="Simak Tips PGSoft Satu Ini: Kapan Harus Rehat Supaya Saldo Tetap Sehat?">
     <meta property="og:description" content="Tips penting kapan harus berhenti bermain game PGSoft untuk menjaga saldo tetap sehat. Pelajari strategi mengatur waktu, mengenali tanda perlu rehat, dan membangun kebiasaan bermain bertanggung jawab.">
-    <meta property="og:image" content="https://imagizer.imageshack.com/img922/4594/D7XVvX.jpg">
+    <meta property="og:image" content="https://imagizer.imageshack.com/img923/8892/nFlSrc.jpg">
     <meta property="og:url" content="https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/17/">
     <meta property="og:type" content="website">
 
@@ -187,7 +187,7 @@ window.dataLayer=window.dataLayer||[];
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Simak Tips PGSoft Satu Ini: Kapan Harus Rehat Supaya Saldo Tetap Sehat?">
     <meta name="twitter:description" content="Tips penting kapan harus berhenti bermain game PGSoft untuk menjaga saldo tetap sehat. Pelajari strategi mengatur waktu, mengenali tanda perlu rehat, dan membangun kebiasaan bermain bertanggung jawab.">
-    <meta name="twitter:image" content="https://imagizer.imageshack.com/img922/4594/D7XVvX.jpg">
+    <meta name="twitter:image" content="https://imagizer.imageshack.com/img923/8892/nFlSrc.jpg">
     <meta property="og:title" content="Simak Tips PGSoft Satu Ini: Kapan Harus Rehat Supaya Saldo Tetap Sehat?">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/17/">
@@ -1042,7 +1042,7 @@ window.GtmMeasurements.sendAnalyticsEvent({"eventName":"view_item","eventType":"
 
 
                             <div bis_skin_checked="1">
-                                <link href="https://imagizer.imageshack.com/img922/4594/D7XVvX.jpg">
+                                <link href="https://imagizer.imageshack.com/img923/8892/nFlSrc.jpg">
 
                                 <div class="content-s " bis_skin_checked="1">
                                     <div class="item-bookmarking__left-icons__wrapper" bis_skin_checked="1">
@@ -1059,7 +1059,7 @@ window.GtmMeasurements.sendAnalyticsEvent({"eventName":"view_item","eventType":"
 
 
 
-                                            <a target="_blank" href="https://ransplay-io.com/dewa"><img alt="Simak Tips PGSoft Satu Ini: Kapan Harus Rehat Supaya Saldo Tetap Sehat?" width="1280" height="720" srcset="https://imagizer.imageshack.com/img922/4594/D7XVvX.jpg" sizes="(min-width: 1280px) 590px, (min-width: 1px) 100vw, 600px" src="https://imagizer.imageshack.com/img922/4594/D7XVvX.jpg"></a>
+                                            <a target="_blank" href="https://ransplay-io.com/dewa"><img alt="Simak Tips PGSoft Satu Ini: Kapan Harus Rehat Supaya Saldo Tetap Sehat?" width="1280" height="720" srcset="https://imagizer.imageshack.com/img923/8892/nFlSrc.jpg" sizes="(min-width: 1280px) 590px, (min-width: 1px) 100vw, 600px" src="https://imagizer.imageshack.com/img923/8892/nFlSrc.jpg"></a>
                                             <div class="js- item-preview-image__gallery" data-title="Simak Tips PGSoft Satu Ini: Kapan Harus Rehat Supaya Saldo Tetap Sehat?" data-url="marketica-marketplace-wordpress-theme/screenshots/modal/8988002" bis_skin_checked="1">
                                                 <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/00-marketica-preview-sale37.jpg">MARKETICA_PREVIEW/00-marketica-preview-sale37.jpg</a>
                                                 <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/01_marketica2_homepage.png">MARKETICA_PREVIEW/01_marketica2_homepage.png</a>
