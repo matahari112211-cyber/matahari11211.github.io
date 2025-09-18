@@ -36,7 +36,7 @@ var codeVersion="f7d8b3d494288b34cb00105ee5d230d68b0ccca7"</script>
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Roadmap 7 Hari: Latihan Konsistensi di Mahjong Wins 3 Dengan Tips Langsung Dari Pecinta PGSoft",
-  "image": "https://imagizer.imageshack.com/img923/5814/cqzB7C.jpg",
+  "image": "https://imagizer.imageshack.com/img922/7594/DRS9lt.jpg",
   "description": "Tingkatkan konsistensi bermain Mahjong Wins 3 dalam 7 hari! Ikuti roadmap dari pecinta PGSoft dengan tips manajemen modal, kontrol emosi, dan strategi taruhan.",
   "brand": {
     "@type": "Brand",
@@ -179,7 +179,7 @@ window.dataLayer=window.dataLayer||[];
     <!-- Open Graph -->
     <meta property="og:title" content="Roadmap 7 Hari: Latihan Konsistensi di Mahjong Wins 3 Dengan Tips Langsung Dari Pecinta PGSoft">
     <meta property="og:description" content="Tingkatkan konsistensi bermain Mahjong Wins 3 dalam 7 hari! Ikuti roadmap dari pecinta PGSoft dengan tips manajemen modal, kontrol emosi, dan strategi taruhan.">
-    <meta property="og:image" content="https://imagizer.imageshack.com/img923/5814/cqzB7C.jpg">
+    <meta property="og:image" content="https://imagizer.imageshack.com/img922/7594/DRS9lt.jpg">
     <meta property="og:url" content="https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/16/">
     <meta property="og:type" content="website">
 
@@ -187,7 +187,7 @@ window.dataLayer=window.dataLayer||[];
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Roadmap 7 Hari: Latihan Konsistensi di Mahjong Wins 3 Dengan Tips Langsung Dari Pecinta PGSoft">
     <meta name="twitter:description" content="Tingkatkan konsistensi bermain Mahjong Wins 3 dalam 7 hari! Ikuti roadmap dari pecinta PGSoft dengan tips manajemen modal, kontrol emosi, dan strategi taruhan.">
-    <meta name="twitter:image" content="https://imagizer.imageshack.com/img923/5814/cqzB7C.jpg">
+    <meta name="twitter:image" content="https://imagizer.imageshack.com/img922/7594/DRS9lt.jpg">
     <meta property="og:title" content="Roadmap 7 Hari: Latihan Konsistensi di Mahjong Wins 3 Dengan Tips Langsung Dari Pecinta PGSoft">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://telupress.telkomuniversity.ac.id/vendor/egulias/rans/16/">
@@ -1042,7 +1042,7 @@ window.GtmMeasurements.sendAnalyticsEvent({"eventName":"view_item","eventType":"
 
 
                             <div bis_skin_checked="1">
-                                <link href="https://imagizer.imageshack.com/img923/5814/cqzB7C.jpg">
+                                <link href="https://imagizer.imageshack.com/img922/7594/DRS9lt.jpg">
 
                                 <div class="content-s " bis_skin_checked="1">
                                     <div class="item-bookmarking__left-icons__wrapper" bis_skin_checked="1">
@@ -1059,7 +1059,7 @@ window.GtmMeasurements.sendAnalyticsEvent({"eventName":"view_item","eventType":"
 
 
 
-                                            <a target="_blank" href="https://ransplay-io.com/dewa"><img alt="Roadmap 7 Hari: Latihan Konsistensi di Mahjong Wins 3 Dengan Tips Langsung Dari Pecinta PGSoft" width="1280" height="720" srcset="https://imagizer.imageshack.com/img923/5814/cqzB7C.jpg" sizes="(min-width: 1280px) 590px, (min-width: 1px) 100vw, 600px" src="https://imagizer.imageshack.com/img923/5814/cqzB7C.jpg"></a>
+                                            <a target="_blank" href="https://ransplay-io.com/dewa"><img alt="Roadmap 7 Hari: Latihan Konsistensi di Mahjong Wins 3 Dengan Tips Langsung Dari Pecinta PGSoft" width="1280" height="720" srcset="https://imagizer.imageshack.com/img922/7594/DRS9lt.jpg" sizes="(min-width: 1280px) 590px, (min-width: 1px) 100vw, 600px" src="https://imagizer.imageshack.com/img922/7594/DRS9lt.jpg"></a>
                                             <div class="js- item-preview-image__gallery" data-title="Roadmap 7 Hari: Latihan Konsistensi di Mahjong Wins 3 Dengan Tips Langsung Dari Pecinta PGSoft" data-url="marketica-marketplace-wordpress-theme/screenshots/modal/8988002" bis_skin_checked="1">
                                                 <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/00-marketica-preview-sale37.jpg">MARKETICA_PREVIEW/00-marketica-preview-sale37.jpg</a>
                                                 <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/01_marketica2_homepage.png">MARKETICA_PREVIEW/01_marketica2_homepage.png</a>
